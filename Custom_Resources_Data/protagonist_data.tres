@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ProtagonistGlobalData_RES" load_steps=2 format=3 uid="uid://clyqi6rcjerut"]
+
+[ext_resource type="Script" uid="uid://o0eoawinwu7b" path="res://Custom_Resources/Character_Data/Protagonist_Data/protagonist_global_data_res.gd" id="1_xop1o"]
+
+[resource]
+script = ExtResource("1_xop1o")
+jump_cut_proportion = 0.3
+full_speed_rate_grounded = 10.0
+full_speed_rate_airbourne = 10.0
+ground_mobility = 15.0
+air_mobility = 12.0
+jump_strength = 3000.0
