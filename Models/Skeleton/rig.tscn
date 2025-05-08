@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://bqvifff1djkf4"]
+[gd_scene load_steps=7 format=3 uid="uid://bqvifff1djkf4"]
 
 [ext_resource type="PackedScene" uid="uid://db6v7twtadxvx" path="res://Models/Skeleton/skeletonTest.fbx" id="1_sy8mi"]
 [ext_resource type="Animation" uid="uid://bmm4b7255t83k" path="res://Animation/PersonajePrincipal/chestAnim.res" id="2_q5d6v"]
+[ext_resource type="Animation" uid="uid://2k25f206upp5" path="res://Animation/PersonajePrincipal/escoliosis_anim.res" id="3_opeb5"]
 
 [sub_resource type="Animation" id="Animation_616u6"]
 resource_name = "Take 001"
@@ -210,14 +211,16 @@ _data = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_opeb5"]
 _data = {
-&"chestAnim": ExtResource("2_q5d6v")
+&"chestAnim": ExtResource("2_q5d6v"),
+&"escoliosis_anim": ExtResource("3_opeb5")
 }
 
 [node name="skeletonTest" instance=ExtResource("1_sy8mi")]
 
 [node name="Skeleton3D" parent="Rig_Skeleton/Skeleton/Rig" index="0"]
+bones/1/position = Vector3(-2.36658e-32, 0.00361891, 3.7716e-05)
 bones/1/rotation = Quaternion(-1.11128e-10, 0.0431578, 2.57241e-09, 0.999068)
-bones/3/position = Vector3(-0.000256538, 0.0202112, 0.00296378)
+bones/3/position = Vector3(3.33121e-18, 0.00374988, -4.84291e-17)
 bones/3/rotation = Quaternion(0, 0, 0, 1)
 bones/4/rotation = Quaternion(-0.585406, -0.165867, -0.681244, 0.407056)
 bones/5/rotation = Quaternion(7.11023e-09, -5.54521e-08, -0.443371, 0.896338)
@@ -235,6 +238,7 @@ bones/19/rotation = Quaternion(0.9903, -0.0342015, 0.0295767, 0.131386)
 bones/20/rotation = Quaternion(0.475757, -2.06675e-08, 1.99186e-07, 0.879577)
 bones/21/rotation = Quaternion(-0.671679, 0.111505, -0.0275773, 0.731883)
 bones/22/rotation = Quaternion(-1.18426e-05, 0.920222, -0.391398, -1.27614e-05)
+bones/24/position = Vector3(0.00202182, 0.000259903, 0.00205181)
 bones/25/rotation = Quaternion(9.65792e-09, 1.77955e-09, 0.985719, -0.168398)
 bones/26/rotation = Quaternion(-1.28417e-07, 0.391084, 0.920355, -9.01132e-08)
 bones/32/rotation = Quaternion(-5.83589e-09, 6.43837e-10, 0.994809, 0.101756)
