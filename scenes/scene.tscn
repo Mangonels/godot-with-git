@@ -157,3 +157,5 @@ shape = SubResource("BoxShape3D_73fnb")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D2"]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
 mesh = SubResource("BoxMesh_5juve")
+
+[node name="Layout" type="Node" parent="."]
