@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://dcfo6k3o0rx6h"]
+[gd_scene load_steps=23 format=3 uid="uid://smubjq3tqitb"]
 
 [ext_resource type="Material" uid="uid://d246dff320met" path="res://Materials/Layout/0.TestScene/seamless_grid_green.tres" id="1_8se0a"]
 [ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="2_snaki"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" uid="uid://bi538ieyl3sc3" path="res://Scripts/Characters/Protagonists/Overworld/protagonist_movement_overworld.gd" id="6_hcaqf"]
 [ext_resource type="Script" uid="uid://dpc0t0d6tsvvn" path="res://Scripts/Framework/debug/collision_visualizer_3d.gd" id="7_35nrg"]
 [ext_resource type="Script" uid="uid://cavpdvkudaxly" path="res://Scripts/Framework/contact_checker_groups.gd" id="8_5ywc0"]
+[ext_resource type="PackedScene" uid="uid://v6mtgpufuhix" path="res://Scenes/Models/Environment/test_suzanne.tscn" id="10_5juve"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_j5tj1"]
 size = Vector2(200, 200)
@@ -158,4 +159,6 @@ shape = SubResource("BoxShape3D_73fnb")
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
 mesh = SubResource("BoxMesh_5juve")
 
-[node name="Layout" type="Node" parent="."]
+[node name="TEST_Suzanne" parent="." instance=ExtResource("10_5juve")]
+
+[node name="Environment" type="Node3D" parent="."]
