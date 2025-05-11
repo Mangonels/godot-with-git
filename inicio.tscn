@@ -1,0 +1,107 @@
+[gd_scene load_steps=14 format=3 uid="uid://t3vshg2lyigi"]
+
+[ext_resource type="Script" path="res://pantallainicio/botonanimation/AnimatedButton.gd" id="1_hiww4"]
+[ext_resource type="Script" path="res://iniciar juego.gd" id="1_qmna0"]
+[ext_resource type="Texture2D" uid="uid://b82hksawo0co2" path="res://pantallainicio/boton-tuerca-removebg-preview.png" id="1_v6wmd"]
+[ext_resource type="StyleBox" uid="uid://bfribd0x2pcla" path="res://botoninicioysalir.tres" id="3_ltlb6"]
+[ext_resource type="StyleBox" uid="uid://eqt2qvgfbw23" path="res://botoncolor.tres" id="5_fc1xu"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_jyenw"]
+font_size = 24
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_31rh3"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h7nt1"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0lrn3"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rie10"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="Theme" id="Theme_hclp0"]
+Button/styles/disabled = SubResource("StyleBoxFlat_31rh3")
+Button/styles/focus = SubResource("StyleBoxFlat_h7nt1")
+Button/styles/hover = SubResource("StyleBoxFlat_0lrn3")
+Button/styles/normal = SubResource("StyleBoxFlat_rie10")
+
+[sub_resource type="Theme" id="Theme_qrx5k"]
+Button/styles/disabled = ExtResource("3_ltlb6")
+Button/styles/focus = ExtResource("3_ltlb6")
+Button/styles/hover = ExtResource("3_ltlb6")
+Button/styles/normal = ExtResource("3_ltlb6")
+Button/styles/pressed = ExtResource("3_ltlb6")
+
+[sub_resource type="Theme" id="Theme_w8l45"]
+Button/styles/disabled = ExtResource("3_ltlb6")
+Button/styles/focus = ExtResource("5_fc1xu")
+Button/styles/hover = ExtResource("5_fc1xu")
+Button/styles/normal = ExtResource("3_ltlb6")
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+offset_left = 415.0
+offset_top = 115.0
+offset_right = 726.0
+offset_bottom = 149.0
+text = "elnombre del juege es este"
+label_settings = SubResource("LabelSettings_jyenw")
+
+[node name="AnimatedButton" type="Button" parent="."]
+layout_mode = 2
+offset_left = 1034.0
+offset_right = 1144.0
+offset_bottom = 105.0
+theme = SubResource("Theme_hclp0")
+icon = ExtResource("1_v6wmd")
+expand_icon = true
+script = ExtResource("1_hiww4")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -117.0
+offset_top = -91.0
+offset_right = 131.0
+offset_bottom = 37.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 17
+alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = -48
+
+[node name="iniciar juego" type="Button" parent="VBoxContainer/MarginContainer"]
+layout_mode = 2
+theme = SubResource("Theme_qrx5k")
+text = "INICIAR JUEGO"
+script = ExtResource("1_qmna0")
+
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_bottom = -48
+
+[node name="salir del juego" type="Button" parent="VBoxContainer/MarginContainer2"]
+layout_mode = 2
+theme = SubResource("Theme_w8l45")
+text = "SALIR"
+script = ExtResource("1_hiww4")
+
+[connection signal="pressed" from="VBoxContainer/MarginContainer/iniciar juego" to="VBoxContainer/MarginContainer/iniciar juego" method="_on_pressed"]

@@ -1,15 +1,16 @@
-[gd_scene load_steps=23 format=3 uid="uid://smubjq3tqitb"]
+[gd_scene load_steps=24 format=3 uid="uid://smubjq3tqitb"]
 
 [ext_resource type="Material" uid="uid://d246dff320met" path="res://Materials/Layout/0.TestScene/seamless_grid_green.tres" id="1_8se0a"]
-[ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="2_snaki"]
-[ext_resource type="Script" uid="uid://csjccrhj5wnx7" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3d.gd" id="3_6ka25"]
-[ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="4_e7e8u"]
-[ext_resource type="Script" uid="uid://caxrdui02adbs" path="res://Scripts/Characters/Protagonists/Overworld/protagonist_logic_overworld.gd" id="5_1eouf"]
+[ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="2_snaki"]
+[ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3d.gd" id="3_6ka25"]
+[ext_resource type="Script" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="4_e7e8u"]
+[ext_resource type="Script" path="res://Scripts/Characters/Protagonists/Overworld/protagonist_logic_overworld.gd" id="5_1eouf"]
 [ext_resource type="Resource" uid="uid://clyqi6rcjerut" path="res://Custom_Resources_Data/protagonist_data.tres" id="5_h5323"]
-[ext_resource type="Script" uid="uid://bi538ieyl3sc3" path="res://Scripts/Characters/Protagonists/Overworld/protagonist_movement_overworld.gd" id="6_hcaqf"]
-[ext_resource type="Script" uid="uid://dpc0t0d6tsvvn" path="res://Scripts/Framework/debug/collision_visualizer_3d.gd" id="7_35nrg"]
-[ext_resource type="Script" uid="uid://cavpdvkudaxly" path="res://Scripts/Framework/contact_checker_groups.gd" id="8_5ywc0"]
+[ext_resource type="Script" path="res://Scripts/Characters/Protagonists/Overworld/protagonist_movement_overworld.gd" id="6_hcaqf"]
+[ext_resource type="Script" path="res://Scripts/Framework/debug/collision_visualizer_3d.gd" id="7_35nrg"]
+[ext_resource type="Script" path="res://Scripts/Framework/contact_checker_groups.gd" id="8_5ywc0"]
 [ext_resource type="PackedScene" uid="uid://v6mtgpufuhix" path="res://Scenes/Models/Environment/test_suzanne.tscn" id="10_5juve"]
+[ext_resource type="ArrayMesh" uid="uid://ccww3avhdklk" path="res://Models/peashooter/peashooter.res" id="11_ucy83"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_j5tj1"]
 size = Vector2(200, 200)
@@ -74,7 +75,6 @@ follow_offset = Vector3(0, 2, 5)
 metadata/_custom_type_script = "uid://csjccrhj5wnx7"
 
 [node name="Camera3D" type="Camera3D" parent="."]
-physics_interpolation_mode = 1
 transform = Transform3D(1, 0, 0, 0, 0.928477, 0.371391, 0, -0.371391, 0.928477, 0, 3.90102, 5.92847)
 
 [node name="PhantomCameraHost" type="Node" parent="Camera3D"]
@@ -162,3 +162,7 @@ mesh = SubResource("BoxMesh_5juve")
 [node name="TEST_Suzanne" parent="." instance=ExtResource("10_5juve")]
 
 [node name="Environment" type="Node3D" parent="."]
+
+[node name="Peashooter" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.08441, 0.544135, 2.26353)
+mesh = ExtResource("11_ucy83")
